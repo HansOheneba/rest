@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-night: #110d0a;
+  --color-night: #120d0b;
   --color-coal: #1c1612;
-  --color-ember: #e8572a;
-  --color-gold: #f2a541;
-  --color-cream: #f5ead8;
+  --color-ember: #e4572e;
+  --color-gold: #f3a712;
+  --color-cream: #f6ebd9;
   --color-clay: #c9a27e;
   --font-sans: var(--font-bricolage);
-  --font-serif: var(--font-instrument);
+  --font-serif: var(--font-shrikhand);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Shrikhand is already slanted; never let the browser fake an extra italic */
+.font-serif {
+  font-synthesis: none;
+  letter-spacing: -0.01em;
 }
 
 body {

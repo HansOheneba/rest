@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Instrument_Serif } from "next/font/google";
+import { Bricolage_Grotesque, Shrikhand } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 
@@ -8,11 +8,11 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
 });
 
-const instrument = Instrument_Serif({
-  variable: "--font-instrument",
+// Shrikhand: a heavy, slanted display face with a hand-painted signboard feel
+const shrikhand = Shrikhand({
+  variable: "--font-shrikhand",
   subsets: ["latin"],
   weight: "400",
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${bricolage.variable} ${instrument.variable} antialiased`}>
+    <html lang="en" className={`${bricolage.variable} ${shrikhand.variable} antialiased`}>
       <body className="custom-cursor min-h-dvh overflow-x-hidden font-sans">
         <Cursor />
         {children}

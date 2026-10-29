@@ -73,14 +73,14 @@ export const story = [
     title: "Markets before menus.",
     body: "Every morning starts at Makola and the Tema fishing harbour. What we find decides what we cook, so the menu moves with the seasons.",
     image: "1551218808-94e220e084d2",
-    color: "#f2a541",
+    color: "#f3a712",
   },
   {
     kicker: "02 — Fire",
     title: "Coal, clay and patience.",
     body: "Our short rib spends twelve hours in the pot and ten minutes over coal. The asanka bowl on every table is where our pepper sauces are ground by hand.",
     image: "1600565193348-f74bd3c7ccdf",
-    color: "#e8572a",
+    color: "#e4572e",
   },
   {
     kicker: "03 — Table",
