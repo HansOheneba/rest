@@ -25,7 +25,7 @@ function Card({ i, progress, item }: { i: number; progress: MotionValue<number>;
         </div>
         <div className="relative h-72 overflow-hidden md:h-[62vh]">
           <motion.div style={{ scale: imgScale }} className="absolute inset-0">
-            <Image src={img(item.image, 1400)} alt={item.title} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+            <Image src={img(item.image)} alt={item.title} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
           </motion.div>
         </div>
       </motion.div>

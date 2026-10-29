@@ -42,7 +42,7 @@ export default function Hero() {
               transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className="absolute inset-0"
             >
-              <Image src={img(heroDishes[dish], 1200)} alt="Signature dish" fill priority sizes="(min-width: 1024px) 38vw, 70vw" className="object-cover" />
+              <Image src={img(heroDishes[dish])} alt="Signature dish" fill priority sizes="(min-width: 1024px) 38vw, 70vw" className="object-cover" />
             </motion.div>
           </AnimatePresence>
         </div>
@@ -56,7 +56,7 @@ export default function Hero() {
       </div>
 
       <motion.h1
-        style={{ scale: titleScale, opacity: titleOpacity, backgroundImage: `url(${img("1517248135467-4c7edcad34c4", 2000)})` }}
+        style={{ scale: titleScale, opacity: titleOpacity, backgroundImage: `url(${img("1517248135467-4c7edcad34c4")})` }}
         className="relative z-10 mt-6 origin-bottom-left animate-[pan_18s_ease-in-out_infinite] bg-[length:160%] bg-clip-text px-3 text-[23vw] sm:text-[25vw] font-extrabold leading-[0.8] tracking-[-0.06em] [filter:drop-shadow(0_0_40px_rgba(232,87,42,0.35))_brightness(1.25)] text-transparent [-webkit-background-clip:text]"
         aria-label="Asanka"
       >

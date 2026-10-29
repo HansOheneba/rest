@@ -29,7 +29,7 @@ function EventCard({ e, i }: { e: (typeof events)[number]; i: number }) {
         className="relative h-full w-full text-left"
       >
         <div style={{ backfaceVisibility: "hidden" }} className="absolute inset-0 overflow-hidden rounded-[32px]">
-          <Image src={img(e.image, 900)} alt={e.title} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
+          <Image src={img(e.image)} alt={e.title} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-night via-night/30 to-transparent" />
           <div className="absolute inset-x-6 bottom-6">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">{e.day}</p>

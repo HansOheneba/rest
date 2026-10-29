@@ -115,7 +115,7 @@ export default function Menu() {
                 >
                   {/* inline thumbnail on touch screens */}
                   <div className="relative h-[72px] w-[72px] overflow-hidden rounded-2xl sm:hidden">
-                    <Image src={img(d.image, 300)} alt={d.name} fill sizes="72px" className="object-cover" />
+                    <Image src={img(d.image)} alt={d.name} fill sizes="72px" className="object-cover" />
                   </div>
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-3">
@@ -179,7 +179,7 @@ export default function Menu() {
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
               className="relative -ml-36 -mt-48 h-64 w-52 overflow-hidden rounded-3xl shadow-2xl"
             >
-              <Image src={img(hovered.image, 600)} alt="" fill sizes="208px" className="object-cover" />
+              <Image src={img(hovered.image)} alt="" fill sizes="208px" className="object-cover" />
             </motion.div>
           ) : null}
         </AnimatePresence>

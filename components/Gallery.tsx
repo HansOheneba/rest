@@ -45,7 +45,7 @@ export default function Gallery() {
               transition={{ delay: i * 0.06, duration: 0.7 }}
               className={`group relative shrink-0 overflow-hidden rounded-[28px] ${i % 3 === 0 ? "h-[58vh] w-[78vw] sm:w-[42vw]" : i % 3 === 1 ? "mt-16 h-[44vh] w-[64vw] sm:w-[28vw]" : "h-[50vh] w-[70vw] sm:w-[34vw]"}`}
             >
-              <Image src={img(g.id, 1200)} alt={g.caption} fill draggable={false} sizes="(min-width: 640px) 42vw, 78vw" className="pointer-events-none object-cover transition duration-700 group-hover:scale-105" />
+              <Image src={img(g.id)} alt={g.caption} fill draggable={false} sizes="(min-width: 640px) 42vw, 78vw" className="pointer-events-none object-cover transition duration-700 group-hover:scale-105" />
               <figcaption className="absolute bottom-4 left-4 rounded-full bg-night/60 px-4 py-1.5 text-xs backdrop-blur">{g.caption}</figcaption>
             </motion.figure>
           ))}
