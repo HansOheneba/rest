@@ -50,8 +50,8 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-8">
         <OpenStatus />
-        <p className="mt-6 max-w-sm font-serif text-2xl italic leading-snug text-cream/80 sm:text-3xl">
-          Ghanaian food, cooked over coal and served to share.
+        <p className="mt-4 max-w-lg text-balance text-2xl font-semibold leading-snug tracking-tight text-cream/85 sm:text-3xl">
+          Jollof, banku and tilapia off the coal. Order too much and share it.
         </p>
       </div>
 
@@ -65,7 +65,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto mt-6 flex w-full max-w-7xl flex-wrap items-center justify-between gap-6 px-5 sm:px-8">
         <p className="max-w-md text-sm text-cream/60">
-          12 Oxford Street, Osu • Lunch, dinner &amp; late bar • Highlife every Friday
+          12 Oxford Street, Osu. Open for lunch and dinner, with a live Highlife band on Fridays.
         </p>
         <div className="flex items-center gap-4">
           <a href="#menu" className="inline-flex items-center gap-2 text-sm underline-offset-4 hover:underline">

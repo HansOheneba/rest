@@ -39,9 +39,9 @@ export default function Intro() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="absolute bottom-10 font-serif text-xl italic"
+            className="absolute bottom-10 text-lg font-semibold"
           >
-            Osu, Accra — since 2019
+            Osu, Accra. Since 2019
           </motion.p>
         </motion.div>
       ) : null}

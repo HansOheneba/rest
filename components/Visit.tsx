@@ -18,7 +18,7 @@ export default function Visit() {
           <p className="text-6xl font-extrabold tracking-tighter">
             ASANKA<span className="text-ember">.</span>
           </p>
-          <p className="mt-4 max-w-xs font-serif text-xl italic text-cream/60">A modern Ghanaian kitchen &amp; bar.</p>
+          <p className="mt-4 max-w-xs text-xl font-medium text-cream/60">Ghanaian food off the coal, on Oxford Street.</p>
         </div>
         <div className="space-y-4 text-cream/80">
           <a href="https://maps.google.com/?q=Oxford+Street+Osu+Accra" target="_blank" rel="noreferrer" data-cursor="Map" className="flex items-start gap-3 hover:text-gold">
@@ -33,8 +33,8 @@ export default function Visit() {
             const h = hours[d];
             return (
               <li key={d} className={`flex justify-between border-b border-cream/10 pb-2 ${d === today ? "font-bold text-gold" : "text-cream/70"}`}>
-                <span>{dayNames[d]}{d === today ? " · today" : ""}</span>
-                <span>{h ? `${fmt(h[0])} – ${fmt(h[1])}` : "Closed"}</span>
+                <span>{dayNames[d]}{d === today ? " (today)" : ""}</span>
+                <span>{h ? `${fmt(h[0])} to ${fmt(h[1])}` : "Closed"}</span>
               </li>
             );
           })}

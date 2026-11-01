@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion, useMotionValue, useSpring } from "framer-motion";
-import { Flame, Leaf, Minus, Plus, Star, X } from "lucide-react";
+import { Flame, Leaf, Minus, Plus, X } from "lucide-react";
 import { img, menu, type Dish } from "@/lib/data";
 import { table, useTable } from "@/lib/table";
 
@@ -53,8 +53,7 @@ export default function Menu() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-ember">The menu</p>
-            <h2 className="mt-4 text-6xl font-extrabold leading-[0.9] tracking-tighter sm:text-8xl">
+            <h2 className="text-6xl font-extrabold leading-[0.9] tracking-tighter sm:text-8xl">
               Order <span className="font-serif font-normal italic text-gold">everything.</span>
               <br />
               Share it all.
@@ -89,7 +88,7 @@ export default function Menu() {
                 key={k}
                 type="button"
                 onClick={() => setFilter(k)}
-                className={`rounded-full border px-3 py-1.5 transition ${filter === k ? "border-gold bg-gold/15 text-gold" : "border-cream/15 text-cream/60 hover:border-cream/40"}`}
+                className={`px-1 py-1.5 transition ${filter === k ? "text-gold underline decoration-2 underline-offset-4" : "text-cream/60 hover:text-cream"}`}
               >
                 {label}
               </button>
@@ -125,9 +124,7 @@ export default function Menu() {
                       <Spice level={d.spice} />
                       {d.tags.includes("V") ? <Leaf className="h-4 w-4 text-green-400" aria-label="Vegetarian" /> : null}
                       {d.tags.includes("Chef's pick") ? (
-                        <span className="inline-flex items-center gap-1 rounded-full bg-ember/15 px-2 py-0.5 text-[11px] text-ember">
-                          <Star className="h-3 w-3 fill-current" /> Chef&apos;s pick
-                        </span>
+                        <span className="text-sm font-semibold text-ember">Chef&apos;s pick</span>
                       ) : null}
                     </div>
                     <p className="mt-1 text-sm text-cream/55 transition duration-300 group-hover:translate-x-3">{d.desc}</p>
@@ -161,7 +158,7 @@ export default function Menu() {
             })}
           </AnimatePresence>
         </ul>
-        {dishes.length === 0 ? <p className="py-16 text-center font-serif text-2xl italic text-cream/50">Nothing here with that filter. Try another course.</p> : null}
+        {dishes.length === 0 ? <p className="py-16 text-center text-xl text-cream/50">Nothing here with that filter. Try another course.</p> : null}
       </div>
 
       {/* Cursor-following preview, desktop only */}
@@ -206,7 +203,7 @@ export default function Menu() {
             </AnimatePresence>
             <div className="flex items-center gap-3 rounded-full bg-cream p-2 pl-5 text-night shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
               <button type="button" onClick={() => setTrayOpen((v) => !v)} className="flex-1 text-left text-sm">
-                <span className="font-bold">{count} on your table</span> · ₵{total}
+                <span className="font-bold">{count} on your table</span>, ₵{total}
               </button>
               <a href="#reserve" className="rounded-full bg-ember px-5 py-2.5 text-sm font-bold text-cream transition hover:bg-night">
                 Book &amp; pre-order

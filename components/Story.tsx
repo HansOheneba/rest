@@ -16,8 +16,7 @@ function Card({ i, progress, item }: { i: number; progress: MotionValue<number>;
         style={{ scale, top: `calc(8vh + ${i * 28}px)`, backgroundColor: item.color }}
         className="relative grid w-full max-w-6xl origin-top overflow-hidden rounded-[40px] text-night md:grid-cols-2"
       >
-        <div className="flex flex-col justify-between gap-10 p-8 sm:p-12">
-          <p className="text-sm font-bold uppercase tracking-[0.25em]">{item.kicker}</p>
+        <div className="flex flex-col justify-end gap-10 p-8 sm:p-12">
           <div>
             <h3 className="text-5xl font-extrabold leading-[0.95] tracking-tighter sm:text-6xl">{item.title}</h3>
             <p className="mt-6 max-w-md text-lg leading-relaxed text-night/75">{item.body}</p>
@@ -40,8 +39,7 @@ export default function Story() {
   return (
     <section id="story" className="relative scroll-mt-0">
       <div className="mx-auto max-w-7xl px-5 pt-20 sm:px-8">
-        <p className="text-sm uppercase tracking-[0.3em] text-ember">Our story</p>
-        <h2 className="mt-4 max-w-3xl text-5xl font-extrabold leading-[0.95] tracking-tighter sm:text-7xl">
+        <h2 className="max-w-3xl text-5xl font-extrabold leading-[0.95] tracking-tighter sm:text-7xl">
           Named after the clay bowl <span className="font-serif font-normal italic text-gold">every Ghanaian kitchen</span> knows.
         </h2>
       </div>

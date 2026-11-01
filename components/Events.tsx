@@ -32,13 +32,13 @@ function EventCard({ e, i }: { e: (typeof events)[number]; i: number }) {
           <Image src={img(e.image)} alt={e.title} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-night via-night/30 to-transparent" />
           <div className="absolute inset-x-6 bottom-6">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-gold">{e.day}</p>
+            <p className="text-sm font-semibold text-gold">{e.day}</p>
             <h3 className="mt-2 text-4xl font-extrabold tracking-tight">{e.title}</h3>
             <p className="mt-2 text-sm text-cream/75">{e.blurb}</p>
           </div>
         </div>
         <div style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }} className="absolute inset-0 flex flex-col justify-between rounded-[32px] bg-ember p-8 text-night">
-          <p className="text-xs font-bold uppercase tracking-[0.25em]">{e.day}</p>
+          <p className="text-sm font-bold">{e.day}</p>
           <div>
             <h3 className="font-serif text-5xl italic">{e.title}</h3>
             <p className="mt-4 text-lg leading-relaxed">{e.detail}</p>
@@ -54,8 +54,7 @@ export default function Events() {
   return (
     <section id="events" className="mx-auto max-w-7xl scroll-mt-20 px-5 py-28 sm:px-8">
       <div className="mb-12 max-w-2xl">
-        <p className="text-sm uppercase tracking-[0.3em] text-ember">What&apos;s on</p>
-        <h2 className="mt-4 text-5xl font-extrabold leading-[0.95] tracking-tighter sm:text-7xl">
+        <h2 className="text-5xl font-extrabold leading-[0.95] tracking-tighter sm:text-7xl">
           Come for dinner. <span className="font-serif font-normal italic text-gold">Stay for the band.</span>
         </h2>
       </div>

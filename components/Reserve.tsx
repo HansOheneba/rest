@@ -68,11 +68,9 @@ export default function Reserve() {
 
   return (
     <section id="reserve" className="relative scroll-mt-20 overflow-hidden bg-cream py-28 text-night">
-      <div className="pointer-events-none absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-gold/40 blur-[100px]" />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1fr_1.1fr]">
         <div>
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-ember">Reservations</p>
-          <h2 className="mt-4 text-6xl font-extrabold leading-[0.9] tracking-tighter sm:text-8xl">
+          <h2 className="text-6xl font-extrabold leading-[0.9] tracking-tighter sm:text-8xl">
             Save us <span className="font-serif font-normal italic text-ember">a seat.</span>
           </h2>
           <p className="mt-6 max-w-md text-lg text-night/65">
@@ -80,7 +78,7 @@ export default function Reserve() {
           </p>
           {preorder.length ? (
             <div className="mt-8 max-w-md rounded-3xl bg-night p-5 text-cream">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Pre-ordered for your table</p>
+              <p className="font-semibold text-gold">On your table when you arrive</p>
               <ul className="mt-3 space-y-1 text-sm">
                 {preorder.map((i) => <li key={i.name} className="flex justify-between"><span>{i.qty} × {i.name}</span><span>₵{i.qty * i.price}</span></li>)}
               </ul>
@@ -99,14 +97,14 @@ export default function Reserve() {
                 <div className="relative mt-8 w-full max-w-sm rounded-3xl bg-night p-6 text-left text-cream">
                   <span className="absolute -left-3 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full bg-white" />
                   <span className="absolute -right-3 top-1/2 h-6 w-6 -translate-y-1/2 rounded-full bg-white" />
-                  <p className="text-xs uppercase tracking-[0.25em] text-gold">Table confirmed</p>
+                  <p className="text-sm font-semibold text-gold">Table confirmed</p>
                   <p className="mt-2 text-3xl font-extrabold tracking-tight">{name.split(" ")[0]}, party of {guests}</p>
                   <div className="my-5 border-t border-dashed border-cream/25" />
                   <dl className="grid grid-cols-2 gap-4 text-sm">
                     <div><dt className="text-cream/50">Date</dt><dd className="mt-1 font-semibold">{fmt(date!, { weekday: "short", day: "numeric", month: "short" })}</dd></div>
                     <div><dt className="text-cream/50">Time</dt><dd className="mt-1 font-semibold">{time}</dd></div>
                     <div><dt className="text-cream/50">Occasion</dt><dd className="mt-1 font-semibold">{occasion}</dd></div>
-                    <div><dt className="text-cream/50">Ref</dt><dd className="mt-1 font-mono font-semibold text-gold">{confirmed}</dd></div>
+                    <div><dt className="text-cream/50">Ref</dt><dd className="mt-1 font-semibold text-gold">{confirmed}</dd></div>
                   </dl>
                   {preorder.length ? <p className="mt-4 text-xs text-cream/60">+ {preorder.reduce((n, i) => n + i.qty, 0)} dishes pre-ordered (₵{preTotal})</p> : null}
                 </div>

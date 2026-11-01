@@ -28,7 +28,7 @@ export default function Nav() {
     <motion.header
       animate={{ y: hidden ? "-110%" : 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${solid ? "bg-night/80 backdrop-blur-xl" : ""}`}
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${solid ? "bg-night border-b border-cream/10" : ""}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#top" className="text-2xl font-extrabold tracking-tighter">
